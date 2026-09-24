@@ -40,3 +40,45 @@ def keyword_arg_demo(**kwargs):
     print("Keyword Args ",key," ",value)
 
 keyword_arg_demo(name="Hemanth Reddy",age=24)
+
+
+# Practice Problems 
+# 1 - Password Strength Checker 
+def password_strength_checker(password):
+
+  # Must be length >8 
+  if(len(password)<8):
+    return 'Password length min 8 charcters long'
+  
+  #Must Contain the Special Characters !@#$%^&*
+  if not any(char in '!@#$%^&*()' for char in password):
+    return ' password must COntain atleast One Special Character'
+  
+  #Must Contain the One Capital Letter 
+  if not any(char.isupper() for char in password):
+    return 'password Atlest One Upper Character'
+  
+  #Must COntain the atleast One Number 
+  if not any (char.isdigit() for char in password):
+    return 'Contain Atleast One Digit'
+  
+ # Must Contain atleast One Lower Letter 
+  if not any (char.islower() for char in password):
+    return ' contain atleast one lower Character '
+
+  return "Password is More Strong"
+
+print(password_strength_checker("HemanthReddy@1"))
+
+
+# 2 - Factorial of a Number 
+def factorial_number(number):
+  if(number <=1):
+    return 1 
+  else:
+    return number*factorial_number(number-1)
+number=10
+print(f"Factorial of a {number} is :",factorial_number(number))
+
+
+

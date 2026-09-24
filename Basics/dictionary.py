@@ -29,3 +29,13 @@ dict_1={1:'Hemanth',3:4}
 dict_2={2:'Reddy',3:5}
 merge_dict={**dict_1,**dict_2}
 print(merge_dict)
+
+dict_test={"first_name":"Hemanth","last_name":"Reddy"}
+for i in dict_test:
+  print(i,dict_test[i])
+
+nested_dict={"details":{"name":"hemanth"},"additional_details":{"age":24,'gender':"male"}}
+for i in nested_dict:
+  print("Parent-",i)
+  for final_object in nested_dict[i]:
+    print("Final-",final_object)
